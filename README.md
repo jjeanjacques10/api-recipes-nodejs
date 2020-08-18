@@ -5,6 +5,7 @@
 - Conceitos e configuração do ambiente
 - Rotas, métodos HTTP e tipos de parâmetros
 - Banco de dados e Conteinerização
+- Autenticação do usuário com JWT
 
 ## Tecnologias 
 

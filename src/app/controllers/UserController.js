@@ -5,6 +5,7 @@ class UserController {
     async index(request, response) {
         const { page = 1 } = request.query;
 
+        console.log(request.userId);
         const user = await User.findAll({
             attributes: ['id', 'name', 'email', 'status', 'is_admin'],
             limit: 20,
@@ -62,9 +63,8 @@ class UserController {
         }).noUnknown()
 
         try {
-            const { id } = request.params;
 
-            const user = await User.findByPk(id);
+            const user = await User.findByPk(request.userId);
 
             if (!user) {
                 return response.status(400).json({ error: 'Usuário não encontrado' });
