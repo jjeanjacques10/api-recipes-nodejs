@@ -11,10 +11,7 @@ class User extends Model {
                 password_hash: Sequelize.STRING,
                 status: Sequelize.BOOLEAN,
                 is_admin: Sequelize.BOOLEAN,
-            },
-            {
-                sequelize
-            }
+            }, { sequelize }
         )
 
         this.addHook('beforeSave', async (user) => {

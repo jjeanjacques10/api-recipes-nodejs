@@ -3,10 +3,12 @@ import databaseConfig from '../config/database';
 
 import User from '../app/models/User';
 import Category from '../app/models/Category';
+import Attachment from '../app/models/Attachment';
 
 const models = [
     User,
-    Category
+    Category,
+    Attachment
 ]
 
 class Database {

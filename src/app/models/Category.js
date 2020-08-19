@@ -5,10 +5,7 @@ class Category extends Model {
         super.init(
             {
                 description: Sequelize.STRING
-            },
-            {
-                sequelize
-            }
+            }, { sequelize }
         )
     }
 }
