@@ -6,6 +6,7 @@
 - Rotas, métodos HTTP e tipos de parâmetros
 - Banco de dados e Conteinerização
 - Autenticação do usuário com JWT
+- Upload de imagens
 
 ## Tecnologias 
 
