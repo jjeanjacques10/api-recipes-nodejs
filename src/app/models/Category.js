@@ -7,7 +7,10 @@ class Category extends Model {
                 description: Sequelize.STRING
             }, { sequelize }
         )
+        
+        return this;
     }
+
 }
 
 export default Category;
