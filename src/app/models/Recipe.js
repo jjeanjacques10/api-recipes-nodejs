@@ -21,6 +21,7 @@ class Recipe extends Model {
         this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
         this.belongsTo(models.Category, { foreignKey: 'category_id', as: 'category' });
         this.belongsTo(models.Attachment, { foreignKey: 'attachment_id', as: 'attachment' });
+        this.hasMany(models.RecipeItem, { foreignKey: 'recipe_id', as: 'items' });
     }
 }
 

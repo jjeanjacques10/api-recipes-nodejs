@@ -5,6 +5,7 @@ import User from '../app/models/User';
 import Category from '../app/models/Category';
 import Attachment from '../app/models/Attachment';
 import Recipe from '../app/models/Recipe';
+import RecipeItem from '../app/models/RecipeItem';
 
 
 const models = [
@@ -12,6 +13,7 @@ const models = [
     Category,
     Attachment,
     Recipe,
+    RecipeItem,
 ]
 
 class Database {
