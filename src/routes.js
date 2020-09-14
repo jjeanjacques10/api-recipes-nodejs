@@ -13,6 +13,7 @@ import AttachmentController from './app/controllers/AttachmentController';
 import RecipeController from './app/controllers/RecipeController';
 
 import authMiddleware from './app/middlewares/authMiddleware';
+import FavoriteController from './app/controllers/FavoriteController';
 
 routes.post('/auth', AuthController.create);
 routes.post('/users', UserController.create);
@@ -32,5 +33,9 @@ routes.get('/recipes/:id', RecipeController.show);
 routes.put('/recipes/:id', RecipeController.update);
 routes.delete('/recipes/:id', RecipeController.delete);
 routes.post('/recipes', RecipeController.create);
+
+routes.post('/favorites/:recipe_id', FavoriteController.create);
+routes.get('/favorites', FavoriteController.index);
+routes.delete('/favorites/:recipe_id', FavoriteController.delete);
 
 export default routes;

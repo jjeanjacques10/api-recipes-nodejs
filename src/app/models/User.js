@@ -26,6 +26,15 @@ class User extends Model {
     checkPassword(password) {
         return bcryptjs.compare(password, this.password_hash);
     }
+
+    static associate(models) {
+        this.belongsToMany(models.Recipe, {
+            as: 'favorites',
+            through: 'user_favorites',
+            foreignKey: 'user_id',
+        });
+    }
+
 }
 
 export default User;
